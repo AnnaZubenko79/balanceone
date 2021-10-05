@@ -1,0 +1,145 @@
+.contacts {
+    &__inner {
+        position: relative;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        padding-top: 100px;
+        border-right: 1px solid #e0e0e0;
+
+        @media (max-width: $screen-lg) {
+            padding-top: 45px;
+        }
+
+        @media (max-width: $screen-md) {
+            flex-direction: column;
+            border: none;
+        }
+    }
+
+    &__map {
+        margin-right: 60px;
+        max-width: 375px;
+        width: 100%;
+
+        @media (max-width: $screen-md) {
+            margin-right: 0;
+            order: 2;
+        }
+    }
+
+    &__images {
+        max-width: 375px;
+        width: 100%;
+        height: 645px;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: $screen-md) {
+            height: 400px;
+            z-index: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 60px;
+
+        @media (max-width: $screen-md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info {
+        max-width: 720px;
+        width: 100%;
+        padding-top: 30px;
+
+        @media (max-width: $screen-md) {
+            padding-top: 0;
+        }
+    }
+
+    &__descr {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
+
+        @media (max-width: $screen-md) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__data {
+        display: block;
+        max-width: 60px;
+        width: 100%;
+        margin-right: 40px;
+        font-size: 12px;
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__num,
+    &__mail {
+        border-bottom: 1px solid transparent;
+        transition: all 1s;
+
+        &:hover {
+            color: $burgund;
+            border-bottom: 1px solid $burgund;
+        }
+    }
+
+    &__bottom {
+        background-color: $burgund;
+        min-height: 110px;
+        max-width: 1180px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+
+        @media (max-width: $screen-sm) {
+            min-height: 50px;
+        }
+    }
+
+    &__bottom-btn {
+        max-width: 750px;
+        width: 100%;
+        height: 110px;
+        background-color: $burgund;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-transform: uppercase;
+        @include Cinzel(400);
+        font-size: 25px;
+        color: $white;
+
+        @media (max-width: $screen-xl) {
+            max-width: 600px;
+            font-size: 20px;
+        }
+
+        @media (max-width: $screen-md) {
+            justify-content: center;
+        }
+
+        @media (max-width: $screen-sm) {
+            height: 50px;
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
